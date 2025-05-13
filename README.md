@@ -6,14 +6,17 @@
 
 如信息有误，欢迎随时发邮件~~骚扰~~提醒我 waitwill@icloud.com (/≧▽≦)/
 
-## `cn.ics` 补充节假日列表
+## 补充节假日列表
 
-### 西方/国际节日
+### `cn.ics` 
+
+#### 西方/国际节日
 
 - **母亲节**：05月的第 2 个星期日
 - **父亲节**：06月的第 3 个星期日
 - **感恩节**：11月的第 4 个星期四
 - **情人节**：02月14日
+- **白色情人节**：03月14日
 - **植树节**：03月12日
 - **愚人节**：04月01日
 - **万圣夜**：10月31日
@@ -21,7 +24,7 @@
 - **平安夜**：12月24日
 - **圣诞节**：12月25日
 
-### 传统节日
+#### 传统节日
 
 - **中元节**：农历七月十五
 - **腊八节**：农历腊月初八
@@ -29,9 +32,9 @@
 - **南小年**：农历腊月二十四
 - **龙抬头**：农历二月初二
 
-### 夏三伏和冬数九
+#### 夏三伏和冬数九
 
-### 行业性节日
+#### 行业性节日
 
 - **教师节**：09月10日
 - **记者节**：10月08日
@@ -40,17 +43,27 @@
 - **护士节**：05月12日
 - **农民丰收节**：秋分
 
-## `addition.cn.ics` 补充节假日列表
+### `addition.cn.ics`
 
-- **白色情人节**
+- **世界红十字日**
+- **世界哮喘日**
+- *持续更新中...*
 
 ## 食用方法（以 iOS 日历举例，其他平台同理）
 
+> ### `cn.ics`
 > *以下订阅地址内容相同，选取一个可用的就好*  
 > 订阅地址1：Github Pages：https://willsat.github.io/fixcalendar/cn.ics  
 > 订阅地址2：Github Raw：https://raw.githubusercontent.com/WillSat/fixcalendar/refs/heads/main/cn.ics  
 > *由于大陆 GitHub Pages 遭到 DNS 污染，可能会订阅失败。故提供 Cloudflare Pages 备份*  
-> 订阅地址3：https://fixcalendar.pages.dev/cn.ics  
+> 订阅地址3：https://fixcalendar.pages.dev/cn.ics
+
+> ### `addition.cn.ics`
+> *以下订阅地址内容相同，选取一个可用的就好*  
+> 订阅地址1：Github Pages：https://willsat.github.io/fixcalendar/addition.cn.ics  
+> 订阅地址2：Github Raw：https://raw.githubusercontent.com/WillSat/fixcalendar/refs/heads/main/addition.cn.ics  
+> *由于大陆 GitHub Pages 遭到 DNS 污染，可能会订阅失败。故提供 Cloudflare Pages 备份*  
+> 订阅地址3：https://fixcalendar.pages.dev/addition.cn.ics  
 
 1. 打开日历应用；
 2. 点击应用下方 `日历` 字样，点击左下角添加日历；

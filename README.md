@@ -6,7 +6,11 @@
 
 如信息有误，欢迎随时发邮件~~骚扰~~提醒我 waitwill@icloud.com (/≧▽≦)/
 
-![截图展示](img/IMG1.png)
+<table>
+  <tr>
+    <td><img src="img/IMG1.png" /></td><td><img src="img/IMG2.jpg" /></td>
+  </tr>
+</table>
 
 ## `cn.ics` 补充节假日列表
 

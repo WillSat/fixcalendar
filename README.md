@@ -28,11 +28,14 @@
 <tr><td>万圣节</td><td>11月01日</td></tr>
 <tr><td>平安夜</td><td>12月24日</td></tr>
 <tr><td>圣诞节</td><td>12月25日</td></tr>
-<tr><td rowspan="5">传统节日</td><td>中元节</td><td>农历七月十五</td></tr>
+
+<tr><td rowspan="6">传统节日/民族特色节日</td><td>中元节</td><td>农历七月十五</td></tr>
 <tr><td>腊八节</td><td>农历腊月初八</td></tr>
 <tr><td>北小年</td><td>农历腊月二十三</td></tr>
 <tr><td>南小年</td><td>农历腊月二十四</td></tr>
 <tr><td>龙抬头</td><td>农历二月初二</td></tr>
+<tr><td>火把节</td><td>农历六月二十四</td></tr>
+
 <tr><td>夏三伏和冬九九</td><td colspan="2">每个农历年年初更新对应年份的夏三伏和冬九九</td></tr>
 
 <tr><td rowspan="6">行业性节日</td><td>教师节</td><td>09月10日</td></tr>
@@ -86,6 +89,7 @@
 <td>世界海狮日</td>
 <td>世界无烟日</td>
 </tr>
+
 <tr><td colspan="99">六月</td></tr>
 <tr>
 <td>全球跑步日</td>
@@ -124,9 +128,42 @@
 <td>国际热带日</td>
 <td>国际小行星日</td>
 </tr>
+
 <tr><td colspan="99">七月</td></tr>
 <tr>
-<td>...</td>
+<td>国际合作社日</td>
+<td>香港回归日</td>
+<td>体育记者日</td>
+<td>世界 UFO 日</td>
+<td>国际接吻日</td>
+<td>世界巧克力日</td>
+<td>世界过敏性疾病日</td>
+<td>世界人口日</td>
+<td>世界防治沙尘暴日</td>
+<td>银色情人节</td>
+<td>世界青年技能日</td>
+<td>国际冰壶日</td>
+<td>世界表情符号日</td>
+<td>纳尔逊·曼德拉国际日</td>
+<td>人类月球日</td>
+<td>国际象棋日</td>
+<td>清洁工日</td>
+<td>世界预防溺水日</td>
+<td>粤语日</td>
+<td>世界语创立日</td>
+<td>世界肝炎日</td>
+<td>世界爱虎日</td>
+<td>国际友谊日</td>
+</tr>
+
+<tr><td colspan="99">八月</td></tr>
+<tr>
+<td>待更新</td>
+</tr>
+
+<tr><td colspan="99">农历节日 · 2025</td></tr>
+<tr>
+<td>观世音菩萨成道日</td>
 </tr>
 </table>
 

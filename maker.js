@@ -1,30 +1,25 @@
-/// 仅每年重复的公历节日可以使用
+function maker(obj) {
 
-function gstr({ month, day, name, year }) {
-  if (!year) year = '2024';
-  return `BEGIN:VEVENT
-UID:${toLengthedStr(month)}${toLengthedStr(day)}
-SUMMARY:${name}
-DTSTART;TZID=Asia/Shanghai:${year}${toLengthedStr(month)}${toLengthedStr(day)}
-DTEND;TZID=Asia/Shanghai:${year}${toLengthedStr(month)}${toLengthedStr(day + 1)}
-RRULE:FREQ=YEARLY;BYMONTH=${month};BYMONTHDAY=${day}
+  const tempArr = [];
+
+  for (const event of obj) {
+    tempArr.push(`BEGIN:VEVENT
+UID:${event[0]}#${event[1]}-${event[2]}@fixcalendar-additional-waitwill
+SUMMARY:${event[0]}
+DTSTART;TZID=Asia/Shanghai:${event[1]}
+DTEND;TZID=Asia/Shanghai:${event[2]}${event[3] ? '\n' + event[3] : ''}
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
-END:VEVENT`;
-
-  function toLengthedStr(int) {
-    if (int.toString().length === 1) {
-      return `0${int}`;
-    } else {
-      return int.toString();
-    }
+END:VEVENT`);
   }
+
+  return `BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:fixcalendar-additional-waitwill
+CALSCALE:GREGORIAN
+X-WR-CALNAME:节假日补充+
+X-APPLE-LANGUAGE:zh
+X-APPLE-REGION:CN
+${tempArr.join('\n')}
+END:VCALENDAR`;
 }
-
-console.log([
-  {
-    month: 7,
-    day: 2,
-    name: '世界 UFO 日'
-  }
-].map(e => gstr(e)).join('\n'));

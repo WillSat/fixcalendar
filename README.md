@@ -158,12 +158,7 @@
 
 <tr><td colspan="99">八月</td></tr>
 <tr>
-<td>待更新</td>
-</tr>
-
-<tr><td colspan="99">农历节日 · 2025</td></tr>
-<tr>
-<td>观世音菩萨成道日</td>
+<td>......</td>
 </tr>
 </table>
 

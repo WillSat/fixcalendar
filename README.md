@@ -3,7 +3,7 @@
 > “我日历上怎么没有父/母亲节啊？”
 
 本项目提供 `.ics` iCalendar 日历订阅文件，用于补充 Apple 设备日历缺失的节假日。  
-订阅链接后就会自动更新，请把麻烦的维护工作全都交给本 Git 主吧！ ✪ ω ✪
+订阅链接后就会自动更新，请把麻烦的维护工作全都交给本 Git 主吧！ (✪ ω ✪)
 
 补充的多是大陆官方没有确立但民间广泛认同的节假日。  
 如信息有误，欢迎随时发邮件~~骚扰~~提醒我 waitwill@icloud.com (/≧▽≦)/  
@@ -19,10 +19,10 @@
 > 已补充至 2030 年
 
 <table>
-<tr><td rowspan="11">西方/国际节日</td><td>母亲节</td><td>05月的第 2 个星期日</td></tr>
-<tr><td>父亲节</td><td>06月的第 3 个星期日</td></tr>
-<tr><td>感恩节</td><td>11月的第 4 个星期四</td></tr>
-<tr><td>情人节</td><td>02月14日</td></tr>
+<tr><td rowspan="12">西方/国际节日</td><td>母亲节</td><td>五月的第 2 个星期日</td></tr>
+<tr><td>父亲节</td><td>六月的第 3 个星期日</td></tr>
+<tr><td>感恩节</td><td>一月的第 4 个星期四</td></tr>
+<tr><td>情人节</td><td>2月14日</td></tr>
 <tr><td>白色情人节</td><td>03月14日</td></tr>
 <tr><td>植树节</td><td>03月12日</td></tr>
 <tr><td>愚人节</td><td>04月01日</td></tr>
@@ -30,6 +30,7 @@
 <tr><td>万圣节</td><td>11月01日</td></tr>
 <tr><td>平安夜</td><td>12月24日</td></tr>
 <tr><td>圣诞节</td><td>12月25日</td></tr>
+<tr><td>复活节</td><td>春分月圆之后第一个星期日</td></tr>
 
 <tr><td rowspan="5">传统/民族特色节日</td><td>中元节</td><td>农历七月十五</td></tr>
 <tr><td>腊八节</td><td>农历腊月初八</td></tr>
@@ -49,7 +50,6 @@
 
 ## 食用方法（以 iOS 日历举例，其他平台同理）
 
-> ### `cn.ics`
 > *以下订阅地址内容相同，选取一个可用的就好*  
 > 订阅地址1：Github Pages：https://willsat.github.io/fixcalendar/cn.ics  
 > 订阅地址2：Github Raw：https://raw.githubusercontent.com/WillSat/fixcalendar/refs/heads/main/cn.ics  

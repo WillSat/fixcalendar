@@ -62,32 +62,6 @@
 
 ## ICS 日历编辑器（gen/）
 
-> 一个纯原生前端（无框架）编写的 iCalendar (.ics) 日历编辑器，位于仓库 gen/ 目录。默认打开并解析本仓库的在线订阅文件：`https://raw.githubusercontent.com/WillSat/fixcalendar/refs/heads/main/cn.ics`
+> 一个 iCalendar (.ics) 日历编辑器，位于仓库 gen/ 目录。
 
-在线地址：**https://willsat.github.io/fixcalendar/gen/**（GitHub Pages，打开即用，无需构建）
-
-### 打开方式
-直接用浏览器打开 gen/index.html 即可（无需构建 / 安装依赖）。页面加载后会自动抓取上面的在线文件并解析；若离线或网络受限，可点击「粘贴」或「导入」手动载入。
-
-### 功能一览
-
-**编辑器**
-- 事件字段编辑：标题、UID、开始/结束日期（全天 / 时刻）、地点、备注、状态、透明度。
-- 重复规则（RRULE）可视化：不重复 / 每年固定日期 / 每年第 N 个星期，实时预览。
-- 日历元信息编辑：X-WR-CALNAME、X-WR-TIMEZONE 等，点击数值直接改。
-- 新建事件。
-
-**批量操作（勾选「批量」后多选）**
-- 复制、+1年 / −1年、自定义年数平移（同步更新 UID 年份后缀）。
-- 重命名（标题查找替换）、属性（批量设置状态/透明度/地点/备注）、规则（批量转单次或套用重复规则）。
-- 删除。
-- 另外支持「整份日历年份平移」。
-
-**导出**
-- 下载 .ics 文件、复制完整 ICS 文本、复制订阅链接、导出结构化 JSON。
-
-### 文件说明
-- gen/index.html — 页面结构
-- gen/styles.css — 米白色设计系统
-- gen/ics-core.js — 纯函数：ICS 解析 / 序列化 / RRULE / 日期 / 转义（可在 Node 中独立测试）
-- gen/app.js — 界面与交互逻辑
+在线地址：**https://willsat.github.io/fixcalendar/gen/index.html**（GitHub Pages，打开即用，无需构建）

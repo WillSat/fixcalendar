@@ -64,4 +64,4 @@
 
 > 一个 iCalendar (.ics) 日历编辑器，位于仓库 gen/ 目录。
 
-在线地址：**https://willsat.github.io/fixcalendar/gen/index.html**（GitHub Pages，打开即用，无需构建）
+在线地址：https://willsat.github.io/fixcalendar/gen/index.html

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<title>ICS 日历编辑器 · fixcalendar</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">✎</div>
+      <div class="brand-text">
+        <h1>ICS 日历编辑器</h1>
+        <p class="sub">fixcalendar · 节假日补充 iCalendar 小工具</p>
+      </div>
+    </div>
+    <div class="top-actions">
+      <div class="btn-group">
+        <button class="btn" id="btnImport" title="从本地 .ics 文件导入">
+          <svg viewBox="0 0 20 20"><path d="M10 3v9m0-9 3 3m-3-3L7 6M4 13v3h12v-3"/></svg>导入
+        </button>
+        <button class="btn ghost" id="btnPaste" title="粘贴 ICS 文本">
+          <svg viewBox="0 0 20 20"><path d="M6 4h8v2h-2V6H8v0H6zm0 2a2 2 0 0 0-2-2m2 2h8a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/></svg>粘贴
+        </button>
+      </div>
+      <div class="wrap">
+        <button class="btn accent" id="btnExport">导出
+          <svg viewBox="0 0 20 20"><path d="M10 12V4m0 8 3-3m-3 3-3-3M4 15h12z"/></svg>
+        </button>
+        <div class="menu" id="exportMenu" hidden></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="source-strip">
+    <span class="dot" id="srcDot"></span>
+    <span class="src-label" id="srcLabel">正在加载在线文件…</span>
+    <button class="link-btn" id="btnSource">更换来源</button>
+    <div class="spacer"></div>
+    <input id="urlInput" class="url-input" spellcheck="false" placeholder="iCalendar 订阅/文件地址">
+    <button class="btn ghost sm" id="btnLoadUrl">加载</button>
+  </div>
+
+  <section class="stats" id="stats" hidden></section>
+
+  <div class="layout">
+    <main class="list">
+      <div class="list-toolbar">
+        <div class="search-wrap">
+          <svg viewBox="0 0 20 20"><path d="M8 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm0-1a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm6 9.3 3 3-1.4 1.4-3-3z"/></svg>
+          <input id="search" class="search" placeholder="搜索标题 / UID / 描述…">
+        </div>
+        <div class="filter-group">
+          <select id="yearFilter" class="sel" title="按年份筛选"></select>
+          <select id="typeFilter" class="sel" title="按类型筛选">
+            <option value="all">全部</option>
+            <option value="recurring">每年重复</option>
+            <option value="once">单次</option>
+          </select>
+          <label class="check" title="勾选多个事件进行批量操作"><input type="checkbox" id="selectMode"><span class="pill">批量</span></label>
+          <label class="check" title="按节日分组显示"><input type="checkbox" id="groupMode" checked><span class="pill">分组</span></label>
+          <button class="btn ghost sm" id="btnAdd" title="新建一个事件">＋ 新建事件</button>
+          <button class="btn ghost sm" id="btnCalInfo">日历信息</button>
+        </div>
+      </div>
+
+      <div class="batchbar" id="batchbar" hidden>
+        <span class="batch-count">已选 <b id="selCount">0</b> 项</span>
+        <button class="btn sm" data-batch="duplicate">复制</button>
+        <button class="btn sm" data-batch="shiftUp">+1年</button>
+        <button class="btn sm" data-batch="shiftDown">−1年</button>
+        <button class="btn sm" data-batch="shiftCustom">平移…</button>
+        <button class="btn sm" data-batch="rename">重命名</button>
+        <button class="btn sm" data-batch="props">属性…</button>
+        <button class="btn sm" data-batch="rrule">规则…</button>
+        <button class="btn danger sm" data-batch="delete">删除</button>
+        <button class="btn ghost sm" data-batch="clear">取消</button>
+      </div>
+
+      <div class="events" id="events"></div>
+      <div class="empty" id="empty" hidden>
+        <div class="empty-ico">🗓️</div>
+        <p class="empty-title">暂无事件</p>
+        <p class="empty-sub">载入一份 .ics 日历，或点击右上角「导入」。</p>
+        <button class="btn ghost sm" id="btnLoadDefault">载入在线示例</button>
+      </div>
+    </main>
+
+    <aside class="panel">
+      <div class="panel-head" id="panelHead" hidden>
+        <h2 id="panelTitle"></h2>
+        <button class="icon-btn" id="closePanel" title="关闭">✕</button>
+      </div>
+      <div id="panelBody"></div>
+      <div class="panel-placeholder" id="panelPlaceholder">
+        <div class="ph-ico">🖋️</div>
+        <p>从左侧选择一个事件进行编辑。</p>
+        <p class="ph-dark">也可以点上方「日历信息」查看与修改整份日历的元信息。</p>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modalOverlay" hidden>
+  <div class="modal" id="modal">
+    <div class="modal-head"><h2 id="modalTitle"></h2><button class="icon-btn" id="closeModal">✕</button></div>
+    <div class="modal-body" id="modalBody"></div>
+    <div class="modal-foot" id="modalFoot"></div>
+  </div>
+</div>
+
+<input type="file" id="fileInput" accept=".ics,text/calendar" hidden>
+<div class="toast" id="toast" hidden></div>
+
+<script src="ics-core.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
